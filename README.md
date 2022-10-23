@@ -1,4 +1,4 @@
-# Cadastro de CLientes
+# Cadastro de Clientes
  Projeto desenvolvido para praticar conceitos, realizando um crud no localStorage.
 <br>
 GitHub Pages: https://kauecouto.github.io/Cadastro-de-clientes/
