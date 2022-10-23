@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/colors.css">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <link rel="stylesheet" href="assets/styles/table.css">
+    <link rel="stylesheet" href="assets/styles/modal.css">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <section class="scren-modal">
+        <article class="modal">
+            <header>
+                <h2>Novo Cliente</h2>
+            </header>
+            <form class="form-cadastro">
+                <input type="text" class="input nome" data-index="new" placeholder="Nome do Cliente" required>
+                <input type="email" class="input email" placeholder="E-mail do Cliente" required>
+                <input type="text" class="input celular" placeholder="Celular do Cliente" 
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" 
+                maxlength="11"  required>
+                <input type="text" class="input cidade" placeholder="Cidade do Cliente" required>
+                <div>
+                    <input type="submit" value="Salvar" class="btn-salvar">
+                    <input type="button" value="Cancelar" class="btn-cancelar" onclick="closeModal()">
+                </div>
+            </form>
+        </article>
+    </section>
+    <header>
+        <h1>Cadastro de Clientes</h1>
+    </header>
+    <main>
+        <section>
+            <input type="button" value="Cadastrar Cliente" class="btn-cadastrar" onclick="openModal()">
+            <img src="assets/imagens/tema-claro.svg" alt="button-tema" class="tema claro" id="botao-tema" onclick="trocarTema()">
+            <table>
+                <thead>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Opções</th>
+                </thead>
+                <tbody id="t-body">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="assets/js/localStorage.js"></script>
+    <script src="assets/js/crud.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tema.js"></script>
+</body>
+</html>

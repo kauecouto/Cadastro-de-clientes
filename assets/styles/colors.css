@@ -1,0 +1,15 @@
+:root{
+    --black-gray: #424342; 
+    --black500: #141414;
+    --gelo: #EEF0F2;
+    --gelo200: #eeeeee;
+    --gelo500: #adadad;
+    --grey: #303034;
+    --grey300: #202024;
+    --green: rgb(35, 152, 35);
+    --green300: rgb(23, 101, 23);
+    --blue200: #59A5D8;
+    --blue400: #4486af;
+    --red300: rgb(219, 19, 19);
+    --red500: rgb(156, 15, 15);
+}
