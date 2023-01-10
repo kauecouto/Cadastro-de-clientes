@@ -1,4 +1,6 @@
 let buttonTema = document.getElementById('botao-tema')
+let tema = ''
+tema = localStorage.getItem('tema')
 
 const imagemButton = {
     claro: './assets/imagens/tema-claro.svg',
@@ -6,7 +8,7 @@ const imagemButton = {
 }
 
 const trocarTema = () => {
-    if(buttonTema.className == 'tema claro'){
+    if(tema == 'tema claro'){
         buttonTema.src = imagemButton.escuro
         buttonTema.className = 'tema escuro'
         tema()
@@ -29,6 +31,8 @@ const tema = () => {
         section[1].style.backgroundColor = 'white'
         modal.style.backgroundColor = 'white'
         table.style.color = 'black'
+        tema = 'tema claro'
+        localStorage.setItem('tema', tema)
         dadosTable.forEach((element, index) => {
             dadosTable[index].style.backgroundColor = 'var(--gelo200)'
         })
@@ -38,6 +42,8 @@ const tema = () => {
         section[1].style.backgroundColor = 'var(--black-gray)'
         modal.style.backgroundColor = 'var(--black-gray)'
         table.style.color = 'white'
+        tema = 'tema escuro'
+        localStorage.setItem('tema', tema)
         dadosTable.forEach((element,index) => {
             dadosTable[index].style.backgroundColor = 'var(--gelo500)'
         })
