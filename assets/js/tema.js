@@ -8,13 +8,13 @@ const imagemButton = {
 }
 
 const trocarTema = () => {
-    if(tema == 'tema claro'){
-        buttonTema.src = imagemButton.escuro
-        buttonTema.className = 'tema escuro'
-        tema()
-    }else{
+    if(tema == 'tema escuro'){
         buttonTema.src = imagemButton.claro
         buttonTema.className = 'tema claro'
+        tema()
+    }else{
+        buttonTema.src = imagemButton.escuro
+        buttonTema.className = 'tema escuro'
         tema()
     }
 }
