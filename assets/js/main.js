@@ -3,6 +3,7 @@ const form = document.querySelector('.form-cadastro')
 const btnSalvarCliente = document.querySelector('.btn-salvar')
 const headerModal = document.querySelector('header > h2')
 
+
 const crud = new Crud()
 
 // fechar e abrir modal 
