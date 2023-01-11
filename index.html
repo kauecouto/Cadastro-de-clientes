@@ -35,6 +35,10 @@
     </header>
     <main>
         <section>
+            <div class="box_filter">
+                <h2 id="text_filter">filter:</h2>
+                <input type="text" oninput="filter()" id="input-filter">
+            </div>
             <input type="button" value="Cadastrar Cliente" class="btn-cadastrar" onclick="openModal()">
             <img src="assets/imagens/tema-claro.svg" alt="button-tema" class="tema claro" id="botao-tema" onclick="trocarTema(localStorage.getItem('tema'))">
             <table>
@@ -50,10 +54,12 @@
             </table>
         </section>
     </main>
+    
     <script src="assets/js/tema.js"></script>
     <script src="assets/js/localStorage.js"></script>
     <script src="assets/js/crud.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
     
 </body>
 </html>

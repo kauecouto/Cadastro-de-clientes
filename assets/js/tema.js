@@ -1,11 +1,11 @@
 const section = document.getElementsByTagName('section')
+const textFilter = document.querySelector('.box_filter')
 const modal = document.querySelector('.modal')
 const table = document.querySelector('table')
 const dadosTable = document.querySelectorAll('td')
 let buttonTema = document.getElementById('botao-tema')
 let theme = ''
 theme = localStorage.getItem('tema')
-
 
 
 const imagemButton = {
@@ -24,8 +24,6 @@ const trocarTema = (paramTheme) => {
     }
 }
 
-
-
 const tema = () => {
     if(buttonTema.className == 'tema claro'){
         temaEscuro() 
@@ -36,6 +34,7 @@ const tema = () => {
 
 const temaEscuro = () => {
     buttonTema.src = imagemButton.claro
+    textFilter.style.color ='grey'
     document.body.style.backgroundColor = 'var(--gelo)'
     section[1].style.backgroundColor = 'white'
     modal.style.backgroundColor = 'white'
@@ -49,6 +48,7 @@ const temaEscuro = () => {
 
 const temaClaro = () => {
     buttonTema.src = imagemButton.escuro
+    textFilter.style.color ='white'
     document.body.style.backgroundColor = 'var(--black500)'
     section[1].style.backgroundColor = 'var(--black-gray)'
     modal.style.backgroundColor = 'var(--black-gray)'
@@ -60,7 +60,6 @@ const temaClaro = () => {
     })
 }
 
-
 const toMaintainTheme = (paramTheme) => {
     if(paramTheme == 'tema escuro'){
         temaEscuro()
@@ -68,4 +67,5 @@ const toMaintainTheme = (paramTheme) => {
         temaClaro() 
     }
 }
+
 toMaintainTheme(localStorage.getItem('tema'))

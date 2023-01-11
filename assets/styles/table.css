@@ -3,6 +3,7 @@ table{
     color: black;
     padding-top: 1rem;
     width: 100%;
+    min-height: 100px;
 }
 
 thead{
@@ -25,6 +26,22 @@ td{
 .opcoes-cliente{
     display: grid;
 
+}
+
+.box_filter{
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    margin: 0.7rem;
+}
+
+.box_filter input{
+    width: 100%;
+    height: 10px;
+}
+
+#text_filter{
+    margin-right: 0.7rem;
 }
 
 @media (max-width: 630px) {
